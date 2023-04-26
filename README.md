@@ -1,27 +1,44 @@
-# ClientSideJumiaClone
+# Jumia Ecommerce Angular Client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+This is a client-side web application built with Angular that interacts with the Jumia Ecommerce API to provide a user-friendly interface for browsing and purchasing products online.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Clone the repository: `git clone https://github.com/your-username/angular-jumia-ecommerce.git`
+2. Install dependencies: `npm install`
+3. Create a `.env` file in the root directory of the project and add the following environment variables:
+   - `API_URL`: the URL for the Jumia Ecommerce API
+4. Start the server: `ng serve`
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Once the server is running, you can access the application in your web browser at `http://localhost:4200`.
 
-## Build
+The application allows users to:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Browse products by category
+- Search for products by name or description
+- Add products to their cart
+- View their cart
+- Checkout and pay using Stripe
 
-## Running unit tests
+## Technologies Used
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Angular
+- Bootstrap
+- Font Awesome
+- RxJS
 
-## Running end-to-end tests
+## Contributing
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Contributions are always welcome! If you'd like to contribute to this project, please follow these steps:
 
-## Further help
+1. Fork the repository
+2. Create a new branch: `git checkout -b my-new-feature`
+3. Make changes and commit them: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
