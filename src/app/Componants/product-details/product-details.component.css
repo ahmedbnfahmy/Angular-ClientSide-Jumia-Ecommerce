@@ -1,0 +1,30 @@
+.cardDiv {
+  padding: 40px;
+}
+.cardDiv .imgDiv {
+  padding: 25px 25px;
+}
+.cardDiv .cardButton {
+  background-color: #ff9900;
+  width: 100%;
+}
+.cardDiv .rightCard {
+  margin-left: 25px;
+}
+.cardDiv .rightCard div {
+  padding-bottom: 0px;
+}
+.cardDiv .rightCard div p {
+  font-size: 12px;
+}
+.cardDiv .rightCard .ship-policy img {
+  height: 50px;
+  margin-right: 5px;
+}
+.cardDiv .rightCard .ship-policy div {
+  margin-bottom: 15px;
+}
+.cardDiv .rightCard .ship-policy div p {
+  font-size: 11px;
+  margin-bottom: 0px;
+}/*# sourceMappingURL=product-details.component.css.map */

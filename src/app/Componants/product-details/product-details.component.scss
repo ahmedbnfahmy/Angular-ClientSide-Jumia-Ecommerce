@@ -1,0 +1,49 @@
+.cardDiv{
+    padding: 40px;
+    // height: auto;
+    .imgDiv{
+        padding: 25px 25px;
+    }
+    .cardButton{
+        background-color: #ff9900;
+        width: 100%;
+    }
+
+    .rightCard{
+        margin-left: 25px;
+        div{
+            p{
+                font-size: 12px;
+            }
+            
+            padding-bottom: 0px;
+        }
+        .ship-policy{
+            img{
+                height: 50px;
+                margin-right: 5px;
+            }
+
+            div{
+                margin-bottom: 15px;
+                p{
+                    font-size: 11px;
+                    margin-bottom: 0px;
+                }
+            }
+
+        }
+    }
+}
+
+
+.favIcon{
+    margin-left: 450px;
+    color: #ff9900;
+    font-size: 20px;
+    
+}
+
+.favIcon:hover{
+    cursor: pointer;
+}

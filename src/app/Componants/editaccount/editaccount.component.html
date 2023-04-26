@@ -1,0 +1,183 @@
+<div class="container-fluid " >
+  <div class="col-3 " >
+    <div class="container-fluid ">
+      <p class="">
+        <!-- {{userName}} -->
+        <a routerLink="/useraccount/accountoverview" class=" btn-link text-decoration-none  hover-text-danger"><h3  style="color: #FF9900 ;" >{{'Your Account'}}</h3> </a>
+
+        <a class=""></a>
+      </p>
+      <p class="fs-3"></p>
+
+    </div>
+    <div class=""  >
+      <!-- <Name > -->
+
+
+      <div class="col fw-bold">
+        {{"Name:"|translate}}
+      </div>
+      <div class="col">
+        {{User.name }}
+
+
+      </div>
+
+
+
+
+
+    <input  data-bs-toggle="modal" data-bs-target="#Name" data-bs-whatever="@Name" style="border:1px solid  #FF9900 ;">
+
+  </div>
+  <p class="text-danger alert d-none alert-danger p-0 m-0 " #valid_name>{{"! must this name bigger than"}} </p>
+
+  <!-- <Mobile Phone Number: > -->
+
+<div class="col fw-bold">
+  {{"Mobile Phone"|translate}}
+</div>
+<div class="col">
+  {{User.phone }}
+
+</div>
+
+
+
+<input  data-bs-toggle="modal" data-bs-target="#Phone-pop" style="border:1px solid  #FF9900 ;">
+
+
+
+
+<p class="text-danger alert d-none alert-danger p-0 m-0 " #valid_phone>{{"! check your new phone is maybe wrong"}}
+</p>
+
+<!-- <Mobile password > -->
+
+<div class="col fw-bold">
+  {{"Password"|translate}}
+</div>
+<div class="col">
+  ******
+</div>
+
+
+
+<input  data-bs-toggle="modal" data-bs-target="#Password" style="border:1px solid  #FF9900 ;">
+
+
+
+
+<p class="text-danger alert d-none alert-danger p-0 m-0 " #valid_password>
+  {{"! check your new password is maybe wrong. To check a password between 7 to 16 characters which contain only characters, numeric digits, underscore and the first character must be a letter"}}
+</p>
+
+
+
+
+<div class="container-fluid  py-3  mb-4" >
+  <button class="btn  " (click)="changeAlldate()"  routerLink="/User/login" style="background-color:  #FF9900 ;">
+    {{"Done"|translate}}
+  </button>
+</div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--All pop -->
+<!-- pop to name -->
+<div class="modal fade" id="Name" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{"New Name"}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">{{"Name"}}</label>
+            <input type="text" class="form-control" #new_name maxlength="32" minlength="4" name="name"
+              pattern="[A-Za-z]{3,32}" [value]="User.name" required>
+
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{"Cancel"}}</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" #btn_name
+          (click)="changeName(new_name.value,valid_name ,btn_name)"  style="background-color:#FF9900">{{"Save"}} </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- pop to phone -->
+<div class="modal fade" id="Phone-pop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{"New phone"}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-phone" class="col-form-label">{{"Mobile Phone Number"}}</label>
+            <input type="text" class="form-control" #new_phone [value]="User.phone " pattern="^01[0-2]\d{1,8}$"
+              required>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{"Cancel"}}</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+          (click)="changePhone(new_phone.value,valid_phone)">{{"Save"}} </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- pop to password -->
+<div class="modal fade" id="Password" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          {{"New Password"}}
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-Password" class="col-form-label">
+              {{"Password"}}
+            </label>
+            <input type="password" class="form-control" #new_Password>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{"Cancel"}}</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+          (click)="changePassword(new_Password.value,valid_password)">{{"Save"}} </button>
+      </div>
+    </div>
+  </div>
+</div>

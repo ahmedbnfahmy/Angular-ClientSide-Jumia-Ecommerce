@@ -1,0 +1,91 @@
+footer {
+    background: #282828;
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+  
+  footer .FOOTERROW {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  footer .FOOTERROW h3 {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  footer .FOOTERROW p {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  footer .FOOTERROW div:nth-child(2) form input {
+    line-height: 40px;
+    width: 60%;
+    padding: 0 10px;
+  }
+  footer .FOOTERROW div:nth-child(2) form input:hover {
+    border-color: #ff9900;
+  }
+  
+  footer .FOOTERROW div:nth-child(2) form button {
+    line-height: 40px;
+    color: white;
+  
+    border-color: white;
+    background-color: #282828;
+    border-radius: 4px;
+    font-size: 15px;
+    padding: 0 10px;
+    margin-top: 2px;
+    display: inline-block;
+  }
+  footer .FOOTERROW div:nth-child(2) form button:hover {
+    border-color: #ff9900;
+    color: #ff9900;
+  }
+  
+  footer .FOOTERROW div:nth-child(3) > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  footer .FOOTERROW div:nth-child(3) div div img {
+    margin-right: 10px;
+    margin-top: -8px;
+  }
+  
+  .btnn {
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+  .container {
+    padding-bottom: 30px;
+  }
+  #icon i {
+    font-size: 20px;
+  }
+  .f-li {
+    list-style: none;
+    color: white;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline white;
+  }
+  #icon i:hover {
+    color: #ff9900;
+  }
+  .classcolor {
+    background-color: #636262;
+  }
+  h6 {
+    color: white;
+  }
+  .btn12 button:hover {
+    color: #ff9900;
+  }

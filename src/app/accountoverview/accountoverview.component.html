@@ -1,0 +1,38 @@
+<div class="container" class="over-view">
+  <h2>{{"Account Overview"|translate}}</h2>
+  <hr />
+  <div class="row" class="overview-details">
+    <div class="col" class="details-title d-flex">
+      <h6>{{"ACCOUNT DETAILS"|translate}}</h6>
+      <a routerLink="/useraccount/edituser">
+        <i class="fa-solid fa-pen"> </i>
+      </a>
+    </div>
+    <hr />
+    <div class="col" class="details-body">
+      <p>{{ User.name }}</p>
+      <span>{{ User.email }}</span><br /><br /><br />
+      <p>{{ User.phone }}</p>
+      <a routerLink="../change_password"></a>
+    </div>
+  </div>
+
+  <div class="overview-details">
+    <div class="details-title d-flex">
+      <h6>{{"ADRESS BOOK"|translate}}</h6>
+      <a routerLink="../ADDRESS BOOK">
+        <i class="fa-solid fa-pen"></i>
+      </a>
+    </div>
+    <hr />
+    <div class="details-body">
+      <p>{{"Your default shipping address:"|translate}}</p>
+      <span>
+        <p>Country : {{userAddress?.country}}</p>
+        <p>Governate : {{userAddress?.governate}}</p>
+        <p>City : {{userAddress?.city}}</p>
+        <p>Details : {{userAddress?.details}}</p>
+      </span>
+    </div>
+  </div>
+</div>

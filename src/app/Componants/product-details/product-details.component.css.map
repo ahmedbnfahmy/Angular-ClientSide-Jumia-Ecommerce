@@ -1,0 +1,1 @@
+{"version":3,"sources":["product-details.component.scss","product-details.component.css"],"names":[],"mappings":"AAAA;EACI,aAAA;ACCJ;ADCI;EACI,kBAAA;ACCR;ADCI;EACI,yBAAA;EACA,WAAA;ACCR;ADEI;EACI,iBAAA;ACAR;ADCQ;EAKI,mBAAA;ACHZ;ADDY;EACI,eAAA;ACGhB;ADGY;EACI,YAAA;EACA,iBAAA;ACDhB;ADIY;EACI,mBAAA;ACFhB;ADGgB;EACI,eAAA;EACA,kBAAA;ACDpB","file":"product-details.component.css"}

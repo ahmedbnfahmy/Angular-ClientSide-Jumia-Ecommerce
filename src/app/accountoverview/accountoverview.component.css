@@ -1,0 +1,78 @@
+.over-view {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  border-radius: 4px;
+  padding-bottom: 1px;
+}
+
+.over-view h2 {
+  margin-bottom: 0;
+  padding: 6px 14px;
+}
+
+.over-view hr {
+  padding: 0;
+  margin: 0;
+  background-color: currentColor;
+  opacity: 0.1;
+}
+
+.over-view .details-title {
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.over-view .details-title h6 {
+  padding-top: 7px;
+  font-size: 15px;
+}
+
+.over-view .details-title a {
+  border-radius: 108%;
+  width: 34px;
+  height: 34px;
+}
+
+.over-view .details-title a:hover {
+  background: #feeedd;
+}
+
+.over-view .details-title svg {
+  color: #f68b1e;
+  margin: 9px;
+}
+
+.over-view .overview-details {
+  border: 1px solid #ddd;
+  margin: 12px;
+  border-radius: 4px;
+}
+
+.over-view .details-body {
+  padding: 12px;
+}
+
+.over-view .details-body p {
+  margin-bottom: 0;
+}
+
+.over-view .details-body span {
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.over-view .details-body a {
+  text-decoration: none;
+  color: #f68b1e;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+.over-view .details-body a:hover {
+  background: #feeedd;
+}
+
+i {
+  color: #f68b1e;
+}/*# sourceMappingURL=accountoverview.component.css.map */

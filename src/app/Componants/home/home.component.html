@@ -1,0 +1,82 @@
+<div class="mainDiv">
+    <div class="container">
+        <app-side-bar></app-side-bar>
+        <section class="d-flex flex-wrap col-12 justify-content-between">
+            <div *ngFor="let prod of childFashions" class="product col-md-2">
+                <div class="product2" (click)="ProductDetails(prod._id)">
+                    <a  ><img [src]=" 'http://localhost:3030/' + prod.imagePath[0]" alt="" class="myHomeImg"></a>
+                    <p><a >{{prod.name?prod.name.slice(0, 25):prod.arname.slice(0, 25)}}</a></p>
+                </div>
+                <div class="price" >
+                    EGP{{prod.price}}
+                </div>
+                <div class="progress progressimg">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </section>
+        <div class="images">
+            <a><img class="col-6" src="../../../assets/images/home/home1e.png" alt="" *ngIf="currentLang=='en'"></a>
+            <a><img class="col-6" src="../../../assets/images/home/home1a.png" alt="" *ngIf="currentLang=='ar'"></a>
+            <a><img class="col-6" src="../../../assets/images/home/home2e.jpg" alt=" " *ngIf="currentLang=='en'"></a>
+            <a><img class="col-6" src="../../../assets/images/home/home2a.jpg" alt="" *ngIf="currentLang=='ar'"></a>
+        </div>
+        <div class="images">
+            <a><img class="col-6" src="../../../assets/images/home/home3e.jpg" alt="" *ngIf="currentLang=='en'"></a>
+            <a><img class="col-6" src="../../../assets/images/home/home3q.jpg" alt="" *ngIf="currentLang=='ar'"></a>
+            <a><img class="col-6" src="../../../assets/images/home/home4e.png" alt="" *ngIf="currentLang=='en'"></a>
+            <a><img class="col-6" src="../../../assets/images/home/home4a.png" alt="" *ngIf="currentLang=='ar'"></a>
+        </div>
+        <section class="d-flex flex-wrap col-12 justify-content-between">
+            <div *ngFor="let prod of homeAppliances" class="product col-md-2">
+                <div class="product2" (click)="ProductDetails(prod._id)">
+                    <a  ><img [src]=" 'http://localhost:3030/' + prod.imagePath[0]" alt="" class="myHomeImg"></a>
+                    <p><a >{{prod.name?prod.name.slice(0, 25):prod.arname.slice(0, 25)}}</a></p>
+                </div>
+                <div class="price" >
+                    EGP{{prod.price}}
+                </div>
+                <div class="progress progressimg">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </section>
+        <div class="images">
+            <a><img class="col-2" src="../../../assets/images/home/N.png" alt=""></a>
+            <a><img class="col-2" src="../../../assets/images/home/R.png" alt=""></a>
+            <a><img class="col-2" src="../../../assets/images/home/U.png" alt=""></a>
+            <a><img class="col-2" src="../../../assets/images/home/V.png" alt=""></a>
+            <a><img class="col-2" src="../../../assets/images/home/YY.png" alt=""></a>
+            <a><img class="col-2" src="../../../assets/images/home/XX.png" alt=""></a>
+        </div>
+        <section class="d-flex flex-wrap col-12 justify-content-between">
+            <div *ngFor="let prod of womenSprtswear" class="product col-md-2">
+                <div class="product2" (click)="ProductDetails(prod._id)">
+                    <a  ><img [src]=" 'http://localhost:3030/' + prod.imagePath[0]" alt="" class="myHomeImg"></a>
+                    <p><a >{{prod.name?prod.name.slice(0, 25):prod.arname.slice(0, 25)}}</a></p>
+                </div>
+                <div class="price" >
+                    EGP{{prod.price}}
+                </div>
+                <div class="progress progressimg">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </section>
+        <div class="images">
+          <a><img class="col-6" src="../../../assets/images/home/home1-1e.jpg" alt="" *ngIf="currentLang=='en'"></a>
+          <a><img class="col-6" src="../../../assets/images/home/home1-1a.jpg" alt="" *ngIf="currentLang=='ar'"></a>
+          <a><img class="col-6" src="../../../assets/images/home/home1-2e.jpg" alt=" " *ngIf="currentLang=='en'"></a>
+          <a><img class="col-6" src="../../../assets/images/home/home1-2a.jpg" alt="" *ngIf="currentLang=='ar'"></a>
+      </div>
+      <div class="images">
+          <a><img class="col-6" src="../../../assets/images/home/home1-3e.jpg" alt="" *ngIf="currentLang=='en'"></a>
+          <a><img class="col-6" src="../../../assets/images/home/home1-3a.jpg" alt="" *ngIf="currentLang=='ar'"></a>
+          <a><img class="col-6" src="../../../assets/images/home/home1-4e.jpg" alt="" *ngIf="currentLang=='en'"></a>
+          <a><img class="col-6" src="../../../assets/images/home/home1-4a.jpg" alt="" *ngIf="currentLang=='ar'"></a>
+      </div>
+    </div>
+</div>

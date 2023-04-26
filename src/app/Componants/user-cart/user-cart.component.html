@@ -1,0 +1,110 @@
+<!-- <section *ngIf="cartProducts.items.length"> -->
+  <section *ngIf="cartProducts&&cartProducts?.items.length">
+    <div class="container text-center col-xl-* d-flex ">
+      <div>
+        <table class="table mt-3 " style="width: 55rem;background-color: white;border-radius:.5em;">
+          <thead>
+            <tr class="text-dark ">
+              <th scope="col" style="padding: 0.5rem; padding:  0.5em 1em; font-size: 1.2em; ">Cart (
+                {{cartProducts?.items.length}} )</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <ng-container *ngFor="let prd of cartProducts?.items ;let i=index">
+              <tr>
+                <!-- <td>{{i+1}}</td> -->
+                <td><img StyleBox [src]="endpoint+'/'+prd.productId.imagePath[0]" width="100" height="100"></td>
+                <td style="text-align:left">
+                  <p style="font: 1em Verdana;">{{prd.productId.name}}</p>
+                  <p style="font: .8em Arial;">{{prd.productId.description}}</p>
+                </td>
+                <td>
+                  <p style="font: 1em Arial;">EGP {{prd.productId.price}}</p>
+                  <ng-container [ngSwitch]="prd.quantity">
+                    <!-- <ng-container *ngSwitchCase="0">Out Of Stock</ng-container>
+              <ng-container *ngSwitchCase="1">Last one item</ng-container>
+              <ng-container *ngSwitchCase="2">Last 2 item</ng-container>
+              <ng-container *ngSwitchDefault>{{prd.quantity}}</ng-container> -->
+                  </ng-container>
+                  <!-- <tr><td> <button [disabled]="prod.productId.countInStock<=prod.quantity" type="button"
+            class="btn btn-warning mx-2 " (click)="increaseQuantity(i)">
+            <i class="fa-solid fa-plus"></i></button></td></tr> -->
+  
+                </td>
+              </tr>
+  
+              <tr class="text-dark " style="height: 2em;">
+                <td><button class="btn btn-outline-warning" style="outline: none; border: none;"
+                    (click)="onDeleteItem(cartProducts._id,prd.productId._id)"><i class="fa-solid fa-trash"></i>
+                    {{"Remove"|translate}}</button></td>
+                <td></td>
+                <td class="text-dark ">
+                  <div class="d-flex" style="flex-wrap: nowrap;"><button class="btn btn-warning mx-2"
+                      (click)="increaseQuantity(cartProducts._id,prd.productId._id)"
+                      [disabled]="prd.productId.countInStock<=prd.quantity">
+                      <i class="fa-solid fa-plus"></i></button>
+                    <h3 style="padding: 0 1rem;">{{prd.quantity}}</h3>
+                    <button class="btn btn-warning mx-2" (click)="decreaseQuantity(cartProducts._id,prd.productId._id)"
+                      [disabled]="prd.quantity<2"><i class="fa-solid fa-minus"></i></button>
+                  </div>
+                </td>
+  
+  
+              </tr>
+  
+  
+            </ng-container>
+          </tbody>
+        </table>
+      </div>
+  
+      <div class="col-md-3 container2 "
+        style="margin: 2em; background-color: white; height: fit-content; border-radius:.5em;;">
+  
+        <table class="table" style="text-align:left ;" cartProducts.items>
+          <thead>
+            <tr>
+              <th scope="col">{{"CART SUMMARY"|translate}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">{{"Subtotal"|translate}}</th>
+              <!-- <td>{{cartProducts.items[1].productId.price}} EGP</td> -->
+              <td>{{totalPriceCart}} {{"EGP"|translate}}</td>
+              <!-- <td><h2 #itemsCount >{{ prd.productId.price*prd.quantity}}</h2></td> -->
+  
+            </tr>
+            <tr>
+              <td>{{"Jumia Express items are eligible for free delivery"|translate}} </td>
+            </tr>
+            <tr>
+              <td><button type="button" style="background-color: #f68b1e;
+                color: white;width:100% ;" id="btn" class="btn btn-block btn-lg mt-3" (click)="onCheckout()"><i
+                    class="fa fa-shopping-cart"></i> {{"CHECKOUt"|translate}}</button></td>
+  
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+    </div>
+  </section>
+  
+  
+  <section *ngIf="!cartProducts?.items.length || !cartProducts" style="display: flex; justify-content: center;">
+    <div class="card" style="width: 18rem; margin: 5em; text-align: center;">
+      <div class="card-body">
+        <h5 class="card-title">{{"Cart empty"|translate}}</h5>
+        <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+        <p class="card-text">{{" your cart is empty, it's time for Shopping"|translate}} </p>
+  
+        <button class="btn btn-warning  w-100 " [routerLink]="['/']">{{"Start Shopping"|translate}} </button>
+      </div>
+    </div>
+    <P>
+  
+  
+    </P>
+  </section>

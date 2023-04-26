@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form >
+                <h1>{{"Sign up"|translate}}</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <br />
+                <input type="text" placeholder="{{'name'|translate}}" id="signInEmail" required
+                    title="The email must be standard (contain @) for ex: any-letters@(gmail or yahoo or outlook).com " #name />
+                <input type="email" placeholder="{{'Email'|translate}}" id="signInEmail" required
+                    title="The email must be standard (contain @) for ex: any-letters@(gmail or yahoo or outlook).com " #email/>
+                <input type="password" placeholder="{{'Password'|translate}}" id="signInPassword" required
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" #password/>
+                <input type="text" placeholder="{{'phone'|translate}}" id="signInEmail" required
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" #phone/>
+                <div>
+                    <input type="checkbox" onclick="myFunction()">{{"Show Password"|translate}}
+                </div>
+
+                <br /><br />
+                <a href="#">{{"Forgot your password?"|translate}}</a>
+                <button (click)="signup(name.value,email.value,password.value,phone.value)" >{{"Sign up"|translate}}</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+.slider {
+  margin-top: 40px;
+}
+.slider .sided1 {
+  margin-top: 30px;
+}
+.slider .right-colume .sided {
+  border-radius: 10px;
+}
+.slider #carouselExampleAutoplaying .carousel-inner .carousel-item .d-block {
+  height: 400px;
+  border-radius: 10px;
+}
+
+* {
+  list-style-type: none;
+}
+
+.sidebarlink {
+  text-decoration: none;
+  color: black;
+}
+
+.sidebarlink:hover {
+  cursor: pointer;
+  color: orange;
+}/*# sourceMappingURL=side-bar.component.css.map */

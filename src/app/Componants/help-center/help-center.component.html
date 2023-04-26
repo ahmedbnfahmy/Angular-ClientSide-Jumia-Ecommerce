@@ -1,0 +1,41 @@
+<div class="container text-center w-300 h-100">
+  <a><img class="col" src="../../../assets/images/help.jpg" alt=""  alt="" *ngIf="currentLang=='en'"></a>
+  <a><img class="col" src="../../../assets/images/home/help3a.jpg" alt=""  alt="" *ngIf="currentLang=='ar'"></a>
+  <p  style="color: #FF9900;">{{"How can we help you?"|translate}}</p>
+  <input class="rounded-pill" size="50" width="530" type="search" id="searchInput"
+  placeholder="{{'Describe your issue'|translate}}">
+  <span id="g-search-button"></span>
+  <div class="container text-center">
+    <div class="row row-cols-4 w-100 h-100">
+      <div class="col p-0 m-0" class="photo"><img src="../../../assets/images/cancelation.png" width="20%">
+      <p>{{"place&Track order"|translate}}</p></div>
+      <div class="col p-0 m-0" class="photo"><img src="../../../assets/images/payment.png" width="20%">
+        <p>{{"Order Cancellation"|translate}}</p></div>
+      <div class="col p-0" class="photo"><img src="../../../assets/images/returns.png" width="20%">
+        <p>{{"Returns& Refunds"|translate}}</p></div>
+      <div class="col p-0" class="photo"><img src="../../../assets/images/place-track-order.png" width="20%">
+        <p>{{"Payment& Jumiaaccount"|translate}}</p></div>
+    </div>
+
+  </div>
+
+  <h4 style="color: #FF9900;">{{" Other Services"|translate}}</h4>
+
+
+    <div class="row row-cols-3  ">
+
+      <div class="col p-0 m-0" class="help"><img src="../../../assets/images/jumia-express.png" width="60%">
+
+      <p>{{"place&Track order"|translate}}</p></div>
+      <div class="col p-0 m-0" class="help"><img src="../../../assets/images/jumia-global.png" width="60%">
+        <p>{{"Order Cancellation"|translate}}</p></div>
+      <div class="col p-0" class="help"><img src="../../../assets/images/jumia-pay.png" width="60%">
+        <p>{{"Returns& Refunds"|translate}}</p></div>
+    </div>
+
+
+
+</div>
+
+
+

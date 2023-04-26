@@ -1,0 +1,57 @@
+<div class="user-account">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <aside>
+                    <a routerLink="/useraccount/accountoverview">
+                        <i class="fa-regular fa-user "></i>
+                        <span>{{"My Jumia Account"|translate}}</span>
+                    </a>
+                    <hr/>
+                    <a routerLink="orders">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span>{{"Orders"|translate}}</span>
+                    </a>
+                    <a routerLink="saved_items">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>{{"Saved Items"|translate}}</span>
+                    </a>
+                    <a routerLink="copouns">
+                      <i class="fa-brands fa-salesforce"></i>
+                      <span>{{"copouns"|translate}}</span>
+                  </a>
+                  <a routerLink="Recently view">
+                    <i class="fa-solid fa-rotate-right"></i>
+                    <span>{{"Recently view"|translate}}</span>
+                </a>
+                    <hr/>
+                    <a routerLink="account_details">
+                        <span style="margin-left: 7px;">{{"Details"|translate}}</span>
+                    </a>
+                    <a routerLink="Account Mangement">
+                      <span style="margin-left: 7px;">{{"Account Mangement"|translate}}</span>
+                  </a>
+                  <a routerLink="Address Book">
+                    <span style="margin-left: 7px;">{{"ADRESS BOOK"|translate}}</span>
+                </a>
+  
+                <a routerLink="change_password">
+                  <span style="margin-left: 7px;">{{"Newsletter perference"|translate}}</span>
+              </a>
+              <a routerLink="change_password">
+                <span style="margin-left: 7px;"> {{"Close Account "|translate}}</span>
+            </a>
+                    <hr/>
+                    <a routerLink="/" (click)="logOut()">
+                        <span style="margin: auto;color: #f68b1e;font-weight: 500;">{{"LOGOUT"|translate}}</span>
+                    </a>
+                </aside>
+            </div>
+            <div class="col-md-9">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  

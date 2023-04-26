@@ -1,0 +1,60 @@
+.mainDiv {
+  background-color: #f1f1f2;
+}
+
+a {
+  text-decoration: none;
+}
+
+.product {
+  background-color: white;
+  padding: 10px;
+  margin-top: 15px;
+  margin: 5px;
+}
+
+.product p a {
+  font-size: 13px;
+  color: #666;
+  text-align: center;
+  display: inline-block;
+  height: 30px;
+  overflow: hidden;
+}
+
+.product:hover {
+  background-color: #eee;
+  transform: scale(1.05);
+  transition: 0.7s all;
+}
+
+.product img {
+  width: 170px;
+  height: 200px;
+  margin: auto;
+  display: block;
+}
+
+.price {
+  color: #666;
+  font-weight: bold;
+  margin-top: -40px;
+}
+
+.progressimg {
+  height: 7px;
+  width: 150px;
+}
+
+.images {
+  background-color: white;
+  padding: 3px;
+  margin-top: 15px;
+}
+.images a img {
+  padding: 2px;
+  border-radius: 10px;
+}
+.images a img:hover {
+  transform: scale(1.01);
+}/*# sourceMappingURL=categ-products.component.css.map */

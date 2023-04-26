@@ -1,0 +1,21 @@
+.photo:hover {
+  color: #FF9900;
+  border: 1px solid black;
+}
+
+.photo {
+  padding-top: 50px;
+}
+
+h4 {
+  padding: 100px;
+}
+
+.help:hover {
+  color: #FF9900;
+  border: 1px solid black;
+}
+
+.help {
+  padding-bottom: 40px;
+}/*# sourceMappingURL=help-center.component.css.map */

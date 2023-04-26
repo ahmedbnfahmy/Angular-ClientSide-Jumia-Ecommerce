@@ -1,0 +1,199 @@
+<div class="container">
+    <div>
+
+        <p><strong>{{"Add a new address"|translate}}</strong></p>
+    </div>
+
+
+    <form class="row g-3 w-50 mx-auto" [formGroup]="addressForm" (ngSubmit)="addAddress()">
+        <div class="">
+
+            <div class="col-12">
+                <div class="">
+                    <div>
+                        <label for="address" class="form-label fs-5 m-1">
+                            <span class="a-size-base "><strong>{{"Full Name"|translate}}</strong> </span>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <span class="a-dropdown-container ">
+                        <input name="address-ui-widgets-enterAddressStateOrRegion" autocomplete="off"
+                            id="address-ui-widgets-enterAddressStateOrRegion-dropdown-nativeId" tabindex="-1"
+                            class="w-100 rounded-3 form-select" formControlName="fullName"/>
+                            
+                    </span>
+                </div>
+                <div *ngIf="addressForm.controls['fullName'].invalid && (addressForm.controls['fullName'].dirty || addressForm.controls['fullName'].touched)"
+                    class="">
+
+                    <div *ngIf="addressForm.controls['fullName'].errors" class=" text-warning">
+
+                        Please must be select your full name
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="col-12">
+                <div class="">
+                    <div>
+                        <label for="address" class="form-label fs-5 m-1">
+                            <span class="a-size-base "><strong>{{"Phone"|translate}}</strong> </span>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <span class="a-dropdown-container ">
+                        <input name="address-ui-widgets-enterAddressStateOrRegion" autocomplete="off"
+                            id="address-ui-widgets-enterAddressStateOrRegion-dropdown-nativeId" tabindex="-1"
+                            class="w-100 rounded-3 form-select" formControlName="phone"/>
+                            
+                    </span>
+                </div>
+                <div *ngIf="addressForm.controls['phone'].invalid && (addressForm.controls['phone'].dirty || addressForm.controls['phone'].touched)"
+                    class="">
+
+                    <div *ngIf="addressForm.controls['phone'].errors" class=" text-warning">
+
+                        Please must be select your phone
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div class="w-100 form-group">
+                <label for="Country" class="form-label fs-5 m-1"> <strong>{{"Country"|translate}}</strong></label>
+                <select name="address-ui-widgets-enterAddressStateOrRegion" autocomplete="off" id="Country"
+                    tabindex="-1" class=" w-100 rounded-3 form-select" formControlName="country"
+                    (change)="onChangeCountry($event)">
+                    <option class="a-size-base" value="">{{"Select Country"|translate}}</option>
+                    <option *ngFor="let ctry of Countries" value="{{ctry.name}}">
+                        {{ctry.name}}{{ctry.arName}}
+                    </option>
+                </select>
+            </div>
+            <div *ngIf="addressForm.controls['country'].invalid && (addressForm.controls['country'].dirty || addressForm.controls['country'].touched)"
+                class="">
+
+                <div *ngIf="addressForm.controls['country'].errors" class=" text-warning">
+
+                    Please must be select your country
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="state d-block">
+                <div class="col-12 ">
+                    <div class="">
+                        <div>
+                            <label for="address" class="form-label fs-5 m-1">
+                                <span class="a-size-base "><strong>{{"Governate"|translate}}</strong> </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="a-dropdown-container ">
+                            <select name="address-ui-widgets-enterAddressStateOrRegion" autocomplete="off"
+                                id="address-ui-widgets-enterAddressStateOrRegion-dropdown-nativeId" tabindex="-1"
+                                class="w-100 rounded-3 form-select " formControlName="governate"
+                                (change)="onChangeGov($event)">
+                                <option class="a-size-base" value="">{{"Select Governate"|translate}}</option>
+                                <option *ngFor="let gov of Govs" value="{{gov.name}}{{gov.arName}}">
+                                    {{gov.name}}{{gov.arName}}
+                                </option>
+                            </select>
+                        </span>
+                    </div>
+                    <div *ngIf="addressForm.controls['governate'].invalid && (addressForm.controls['governate'].dirty || addressForm.controls['governate'].touched)"
+                        class="">
+
+                        <div *ngIf="addressForm.controls['governate'].errors" class=" text-warning">
+
+                            Please must be select your governate
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="">
+                        <div>
+                            <label for="address" class="form-label fs-5 m-1">
+                                <span class="a-size-base "><strong>{{"City"|translate}}</strong> </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="a-dropdown-container ">
+                            <select name="address-ui-widgets-enterAddressStateOrRegion" autocomplete="off"
+                                id="address-ui-widgets-enterAddressStateOrRegion-dropdown-nativeId" tabindex="-1"
+                                class="w-100 rounded-3 form-select" formControlName="city">
+                                <option class="a-size-base" value="">{{"Select City"|translate}}</option>
+                                <option *ngFor="let city of Cities" value="{{city.name}}{{city.arName}}">
+                                    {{city.name}}{{city.arName}}
+                                </option>
+                            </select>
+                        </span>
+                    </div>
+                    <div *ngIf="addressForm.controls['city'].invalid && (addressForm.controls['city'].dirty || addressForm.controls['city'].touched)"
+                        class="">
+
+                        <div *ngIf="addressForm.controls['city'].errors" class=" text-warning">
+
+                            Please must be select your city
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-12">
+                    <div class="">
+                        <div>
+                            <label for="address" class="form-label fs-5 m-1">
+                                <span class="a-size-base "><strong>{{"Ditails"|translate}}</strong> </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="a-dropdown-container ">
+                            <input name="address-ui-widgets-enterAddressStateOrRegion" autocomplete="off"
+                                id="address-ui-widgets-enterAddressStateOrRegion-dropdown-nativeId" tabindex="-1"
+                                class="w-100 rounded-3 form-select" formControlName="details"/>
+                                
+                        </span>
+                    </div>
+                    <div *ngIf="addressForm.controls['details'].invalid && (addressForm.controls['details'].dirty || addressForm.controls['details'].touched)"
+                        class="">
+
+                        <div *ngIf="addressForm.controls['details'].errors" class=" text-warning">
+
+                            Please must be select your address detals
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 my-5">
+                <button type="submit" class="btn btn-warning w-100">Use this
+                    address</button>
+            </div>
+            <br /><br /><br /><br /><br />
+
+        </div>
+    </form>
+</div>

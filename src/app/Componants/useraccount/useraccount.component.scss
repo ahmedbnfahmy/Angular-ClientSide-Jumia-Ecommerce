@@ -1,0 +1,39 @@
+.user-account {
+    background: whitesmoke;
+    padding: 15px 0;
+  }
+  aside {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%);
+    background-color: #fff;
+    border-radius: 4px;
+  }
+  aside a {
+    display: flex;
+    text-decoration: none;
+    padding: 12px;
+    font-size: 0.875rem;
+    color: #212529;
+    align-items: center;
+  }
+  aside a:hover {
+    background-color: whitesmoke;
+    font-weight: 500;
+  }
+  aside hr {
+    padding: 0;
+    margin: 0;
+    background-color: currentColor;
+    opacity: 0.1;
+  }
+  aside svg {
+    font-size: 1.2rem;
+    color: #212529;
+    margin-left: 10px;
+  }
+  aside span {
+    margin-left: 40px;
+  }
+  .active {
+    background: #ededed;
+  }
+  

@@ -1,0 +1,110 @@
+.mainDiv {
+    background-color: #f1f1f2;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.product {
+    background-color: white;
+    padding: 10px;
+    margin-top: 15px;
+    margin: 5px;
+    // margin: 0px 10px;
+
+}
+
+.product p a {
+    font-size: 13px;
+    color: #666;
+    // margin: 10px 10px;
+    // padding: 0px 10px;
+    text-align: center;
+    display: inline-block;
+    height: 30px;
+    overflow: hidden;
+}
+
+.product:hover {
+    background-color: #eee;
+    transform: scale(1.05);
+    transition: .7s all;
+}
+
+.product img {
+    width: 170px;
+    height: 200px;
+    margin: auto;
+    display: block;
+}
+
+.price {
+    color: #666;
+    font-weight: bold;
+    margin-top: -40px;
+}
+
+// .product button {
+//     width: 80%;
+//     margin: auto;
+//     line-height: 30px;
+//     background-color: #ff9900;
+//     border: none;
+//     border-radius: 5px;
+//     color: #fff;
+//     display: block;
+//     transition: 1s all;
+// }
+
+// .product button:hover {
+//     border-radius: 20px;
+//     transform: scale(0.8);
+// }
+
+.progressimg {
+    height: 7px;
+    width: 150px;
+}
+
+.images {
+    background-color: white;
+    padding: 3px;
+    margin-top: 15px;
+
+    a {
+        img {
+            padding: 2px;
+            border-radius: 10px;
+        }
+
+        img:hover {
+            transform: scale(1.01);
+            // transition: .7s all;
+        }
+    }
+}
+
+.cardButton{
+    background-color: #ff9900;
+    width: 100%;
+}
+
+.cardButton:hover{
+    border-radius: 15px;
+    width: 80%;
+    margin-left: 17px;
+}
+
+
+.favIcon{
+    // margin-left: 450px;
+    color: #ff9900;
+    font-size: 20px;
+    
+}
+
+.favIcon:hover{
+    cursor: pointer;
+}
